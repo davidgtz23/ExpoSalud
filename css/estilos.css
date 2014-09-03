@@ -1,7 +1,10 @@
-.Content
-{
+.Content{
 	margin:0 auto; 
 	width: 100%;
+}
+
+.Column{
+	display: none;
 }
 
 /* Utilities */
@@ -9,7 +12,7 @@
 
 /* MainMenu */
 
-.MainMenu{
+/*.MainMenu{
     background: #8bc34a;
     text-align: right;
     height: 2.5em;
@@ -17,6 +20,13 @@
     position: fixed;
     top: 0;
     margin: 0 auto;
+}*/
+
+.MainMenu{
+    background: #017360;
+    text-align: center;
+    height: 3em;
+    width: 100%;
 }
 
 .MainMenu-list{
@@ -31,13 +41,12 @@
 .MainMenu-link{
     color: white;
     text-decoration: none;
-    line-height: 2.5em;
+    line-height: 3em;
     padding: 0 .5em; 
 }
 
 .MainMenu-link:hover{
-	background: #44CAC7;
-    color: black;
+    color: #D9F4C6;
     text-decoration: none;
     line-height: 2em;
     padding: 0 .5em; 
@@ -46,18 +55,32 @@
 /* Header */
 
 .Header{
-	margin-top: 2.5em;
-}
-
-.Header-imageContainer{
-	margin: 0 auto;
-	width: 180px;
-}
-
-.Header-image{
+	margin: 0 auto; 
 	width: 100%;
 }
 
+.Header-imageContainer1{
+	width: 100px;
+	border-radius: 50%;
+	margin: 0.5em 0.5em 0 1em;
+	padding-right: 0.5em;
+}
+
+.Header-imageContainer2{
+	width: 100px;
+	margin: 0 0.5em 0 1em;
+	padding-right: 0.5em;
+}
+
+.Header-image1,
+.Header-image2{
+	width: 100%;
+}
+
+.Header-image1:hover{
+	-webkit-transition: .5s;
+	-webkit-transform: rotate(360deg);
+}
 
 /* Sponsors */
 .Sponsors{
@@ -69,7 +92,7 @@
 
 .Sponsors-title{
 	margin: 0 0 0 0;
-	color: #2d3c4d;
+	color: #017360;
 	font-size: 1.2em;
 }
 
@@ -86,7 +109,7 @@
 
 /* Footer */
 .Footer{
-    background: #2d3c4d;
+    background: #017360;
     padding:1em 0;
     text-align: center;
     width: 100%;
@@ -100,6 +123,11 @@
 
 
 @media screen and (min-width: 768px){
+	.Header-imageContainer1,
+	.Header-imageContainer2{
+		width: 150px;
+	}
+
 	.Sponsors-link{
 		width: 160px;
 	}
@@ -110,8 +138,17 @@
 		width: 1024px;
 	}
 
-	.MainMenu{
-	    width: 1024px;
+	.Header{
+		width: 1024px;
 	}
+}
 
+@media screen and (min-width: 1000px){
+	.Column{
+		border: solid 2px #017360;
+		display: block;
+		float: right;
+		margin: .5em;
+		width: 25%;
+	}
 }
